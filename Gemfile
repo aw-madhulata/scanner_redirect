@@ -80,3 +80,5 @@ end
 gem "devise", "~> 4.9"
 
 gem "pg", "~> 1.5"
+
+gem "faker", "~> 3.2"

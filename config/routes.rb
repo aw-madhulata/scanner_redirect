@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :events do 
+    resources :comments, only: :create 
+  end 
+  resources :posts do 
+    resources :comments, only: :create
+  end 
   devise_for :users, :controllers => { :sessions => "custom_sessions" }
   get "/profile/:user_id" => "home#profile"
   get "/scanner_page" => "home#scanner_page"
